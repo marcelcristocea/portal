@@ -23,7 +23,6 @@ const renderWithAuthLayout = (Component) => (props) => (
 );
 
 function Routes() {
-
   return (
     <Switch>
       <AuthRoute exact path="/login" render={renderWithAuthLayout(Login)}/>

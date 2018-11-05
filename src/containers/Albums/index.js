@@ -25,7 +25,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-class Login extends Component {
+class Albums extends Component {
   componentDidMount() {
     this.props.actionCreators.fetchAlbums();
   }
@@ -63,7 +63,7 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
+Albums.propTypes = {
   actionCreators: PropTypes.object,
   classes: PropTypes.object,
   albums: PropTypes.object,
@@ -71,9 +71,9 @@ Login.propTypes = {
   fetching: PropTypes.bool
 };
 
-Login = withStyles(styles)(Login);
+Albums = withStyles(styles)(Albums);
 
-Login = connect(mapStateToProps, mapDispatchToProps)(Login);
+Albums = connect(mapStateToProps, mapDispatchToProps)(Albums);
 
-export default Login;
+export default Albums;
 
